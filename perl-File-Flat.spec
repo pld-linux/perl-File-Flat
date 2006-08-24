@@ -10,7 +10,7 @@ Summary:	File::Flat - implements a flat filesystem
 Summary(pl):	File::Flat - implementacja p³askiego systemu plików
 Name:		perl-File-Flat
 Version:	0.96
-Release:	0.1
+Release:	1
 # "same as perl"
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
@@ -20,6 +20,7 @@ URL:		http://search.cpan.org/dist/File-Flat/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
+BuildRequires:	perl-prefork
 BuildRequires:	perl-File-NCopy
 BuildRequires:	perl-File-Remove
 BuildRequires:	perl-Test-ClassAPI

@@ -7,7 +7,7 @@
 %define		pdir	File
 %define		pnam	Flat
 Summary:	File::Flat - implements a flat filesystem
-Summary(pl):	File::Flat - implementacja p³askiego systemu plików
+Summary(pl.UTF-8):   File::Flat - implementacja pÅ‚askiego systemu plikÃ³w
 Name:		perl-File-Flat
 Version:	0.96
 Release:	1
@@ -37,14 +37,14 @@ directories as needed. This is created for things like install scripts
 and such, as you never need to worry about the existance of
 directories, just write to a file, no matter where it is.
 
-%description -l pl
-File::Flat implementuje p³aski system plików. P³aski system plików to
-taki, w którym nie istniej± katalogi. Modu³ udostêpnia abstrakcjê
-ponad ka¿dym normalnym systemem plików, powoduj±c±, ¿e zachowuje siê,
-jakby katalogi nie istnia³y. W efekcie automatycznie tworzy wszystkie
-potrzebne katalogi. S³u¿y do rzeczy takich jak skrypty instalacyjne i
-inne, ¿eby nie trzeba by³o siê martwiæ o istnienie katalogów -
-wystarczy po prostu pisaæ do pliku, nie wa¿ne gdzie on jest.
+%description -l pl.UTF-8
+File::Flat implementuje pÅ‚aski system plikÃ³w. PÅ‚aski system plikÃ³w to
+taki, w ktÃ³rym nie istniejÄ… katalogi. ModuÅ‚ udostÄ™pnia abstrakcjÄ™
+ponad kaÅ¼dym normalnym systemem plikÃ³w, powodujÄ…cÄ…, Å¼e zachowuje siÄ™,
+jakby katalogi nie istniaÅ‚y. W efekcie automatycznie tworzy wszystkie
+potrzebne katalogi. SÅ‚uÅ¼y do rzeczy takich jak skrypty instalacyjne i
+inne, Å¼eby nie trzeba byÅ‚o siÄ™ martwiÄ‡ o istnienie katalogÃ³w -
+wystarczy po prostu pisaÄ‡ do pliku, nie waÅ¼ne gdzie on jest.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

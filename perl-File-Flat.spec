@@ -7,7 +7,7 @@
 %define		pdir	File
 %define		pnam	Flat
 Summary:	File::Flat - implements a flat filesystem
-Summary(pl.UTF-8):   File::Flat - implementacja płaskiego systemu plików
+Summary(pl.UTF-8):	File::Flat - implementacja płaskiego systemu plików
 Name:		perl-File-Flat
 Version:	0.96
 Release:	1

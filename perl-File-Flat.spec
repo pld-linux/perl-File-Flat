@@ -20,6 +20,7 @@ URL:		http://search.cpan.org/dist/File-Flat/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
+# in Makefile versioned dependencies are set, 
 BuildRequires:	perl-prefork
 BuildRequires:	perl-File-Copy-Recursive
 BuildRequires:	perl-File-NCopy

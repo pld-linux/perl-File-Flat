@@ -14,19 +14,19 @@ Release:	1
 # "same as perl"
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	20367f74ff34d92b3c839b3da282b4e0
 URL:		http://search.cpan.org/dist/File-Flat/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
-# in Makefile versioned dependencies are set, 
-BuildRequires:	perl-prefork
-BuildRequires:	perl-File-Copy-Recursive
-BuildRequires:	perl-File-NCopy
-BuildRequires:	perl-File-Remove
-BuildRequires:	perl-File-Slurp
-BuildRequires:	perl-Test-ClassAPI
+BuildRequires:	perl(File::Spec) >= 0.85
+BuildRequires:	perl-File-Copy-Recursive >= 0.35
+BuildRequires:	perl-File-Remove >= 0.38
+BuildRequires:	perl-File-Temp >= 0.17
+BuildRequires:	perl-Test-ClassAPI >= 1.04
+BuildRequires:	perl-Test-Simple >= 0.47
+BuildRequires:	perl-prefork >= 0.02
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -73,4 +73,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/File/Flat.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/File::Flat.3pm*

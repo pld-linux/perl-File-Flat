@@ -1,7 +1,6 @@
 #
 # Conditional build:
-%bcond_without	autodeps	# don't BR packages needed only for resolving deps
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	File
 %define		pnam	Flat
@@ -13,13 +12,13 @@ Release:	1
 # "same as perl"
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	2e58179a4cc6d8fdacaa8e5224b3414d
-URL:		https://metacpan.org/release/File-Flat
+URL:		https://metacpan.org/dist/File-Flat
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
-%if %{with autodeps} || %{with tests}
+%if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.85
 BuildRequires:	perl-File-Copy-Recursive >= 0.35
 BuildRequires:	perl-File-Remove >= 0.38
